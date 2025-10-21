@@ -32,20 +32,18 @@ void setup() {
 
 void loop() { 
   // Read the current state of encoder channels A and B
-  // INSERT CODE HERE - HINT: read the value to aState and bState intialised earlier
-  aState = digitalRead(aLastState)
-  bState = digitalRead(bLastState)
+  aState = digitalRead(outputA);
+  bState = digitalRead(outputB);
 
   // Print the current states of channel A and B to the Serial Monitor
-  // INSERT CODE HERE - HINT: use Serial.print(" ") to print a space between the two values
-
-  Serial.print("State a")
-  Serial.print(aState)
-  Serial.println(" ")
-  Serial.print("State b")
-  Serial.print(bState)
+  Serial.print("State a: ");
+  Serial.print(aState);
+  Serial.print("  "); // space between values
+  Serial.print("State b: ");
+  Serial.println(bState);
 
   // Add a small delay between readings to reduce output frequency
   delay(500);
 }
+
 
