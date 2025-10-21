@@ -1,13 +1,13 @@
 /*
    7MRI0060 - Applied Medical Robotics Module
-   September 2024
-   Author: Harry Robertshaw
 
+   Author: Amani Touihri 
+   
    Purpose: 
-     - Control two motors using an H-Bridge with PWM (speed control)
-     - Read a rotary encoder using interrupts
-     - Calculate the motor's angle in degrees
-     - Demonstrate basic concepts in robotics and motor control
+     - Motors A and B are actuated via PWM and direction pins.
+     - Encoder on pins 2 & 3 tracks motor rotation with interrupt-based ISR.
+     - Motor angle in degrees is calculated in real time.
+     - Interrupt-safe reset when position exceeds ±360°.
 */
 
 // -------------------- ENCODER SETUP --------------------
